@@ -1,0 +1,173 @@
+<html>
+<title>Smart Id Scanner</title>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+background-image:url("https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+background-size:cover;
+background-repeat:no-repeat;
+font-family: 'Nunito', sans-serif;
+color:white;
+}
+.scanner{
+margin:20px;
+padding:15px;
+text-align:center;
+color:white;
+font-weight:bold;
+}
+p{
+vertical-align:right;
+line-height:1.0;
+}
+#heading{
+color:#fff;
+font-size:40px;
+padding-bottom:15px;
+}
+button{
+margin:15px;
+border-radius:16px;
+padding: 10px 20px;
+background-color:#fc6d14;
+font-size:15px;
+color:#fff;
+border: 3px solid #fc6d14;
+cursor:pointer;
+font-family:'Nunito', sans-serif;
+font-weight:bold;
+}
+a{
+text-decoration:none;
+}
+header{
+display:-webkit-flex;
+display:-moz-flex;
+display:-ms-flex;
+display:-o-flex;
+display:flex;
+justify-content:space-between;
+align-items:center;
+paddding:30px 70 px;
+}
+.nav-area{
+list-style:none;
+}
+.nav-area li{
+display:inline-block;
+padding:0 15px;
+text-transform:uppercase;
+}
+.nav-area li a:hover{
+color:grey;
+}
+.btn-area{
+color:white;
+cursor:pointer;
+font-size:16px;
+text-transform:uppercase;
+padding:10px 30px;
+border-radius:5px;
+background:#fc6d14;
+font-weight:bold;
+font-family:'Nunito',sans-serif;
+margin:0;
+}
+.logo{
+cursor:pointer;
+height:50;
+width:60;
+}
+#message{
+text-align:center;
+font-weight:bold;
+}
+.output{
+margin-top:0;
+font-family:'Nunito',sans-serif;;
+font-size:15px;
+text-align:center;
+margin-bottom:10px;
+}
+.output p{
+line-height:2.0;
+}
+.save{
+text-align:center;
+font-family:'Nunito',sans-serif;;
+font-size:15px;
+margin-top:10px;
+}
+.save button{
+margin:15px;
+border-radius:16px;
+padding: 10px 20px;
+background-color:#fc6d14;
+font-size:15px;
+color:white;
+border: 3px solid #fc6d14;
+cursor:pointer;
+font-family:'Nunito', sans-serif;
+font-weight:bold;
+}
+input{
+margin-top:10px;
+margin:5px;
+font-size:15px;
+padding:12px;
+text-align:center;
+boxing-size:border-box;
+border-radius:25px;
+font-family:'Nunito', sans-serif;
+width:500px;
+border:3px solid #fc6d14;
+}
+.view{
+text-align:center;
+font-family:'Nunito',sans-serif;;
+font-size:15px;
+margin-top:10px;
+}
+</style>
+</head>
+<body>
+<header>
+<img src="https://lh3.googleusercontent.com/COfbukN9lscu3FgGUyiVlmokFcgTmbzKAPwOZrvQdZXUXzyw5mt6n9r_CFiouORAPg" class="logo">
+<nav class="nav-area">
+<ul>
+<li></li>
+</ul>
+</nav>
+<a class="btn-area" href="/logout">Log out</a>
+</header>
+<p id="message">{{msg}}</p>
+<div class="scanner">
+<h2 id="heading">Scanner<b></b></h2>
+<form action="/upload" method="post" enctype="multipart/form-data">
+<p>Need to Extract Text from Images?</p><br>
+<p>You have come to the right place!</p><br>
+<p>Enter the URL and Get the Text</p>
+<input type="text" name="url" placeholder="Enter the URL of Image" required style="margin-top:15px;"/><br>
+<button type="submit">Get Text</button>
+</form>
+</div>
+<div class="output" style="color:white;">
+<p><b>Extracted Text from the Image:</b></p>
+<p><b>{{output}}</b></p>
+</div>
+<div class="save" style="color:white;">
+<p style="font-weight:bold;">If You Want to Save the Text, Click Save Text</p>
+<button type="submit"><a href="/save"><p style="color:white;">Save Text</p></a></button>
+<div class="view">
+<p><b>To View the Image, Click View</b></p>
+<button><a href="/view" style="color:white;">View</a></button>
+</div>
+</body>
+</html>

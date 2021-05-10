@@ -1,0 +1,127 @@
+<html>
+<title>Smart Id Scanner</title>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+body{
+background-image:url("https://images.pexels.com/photos/303383/pexels-photo-303383.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+background-size:cover;
+background-repeat:no-repeat;
+font-family: 'Nunito', sans-serif;
+color:white;
+}
+.login{
+margin:20px;
+padding:15px;
+text-align:center;
+color:white;
+font-weight:bold;
+}
+p{
+vertical-align:right;
+line-height:2.0;
+}
+#heading{
+color:#fff;
+font-size:25px;
+padding-bottom:15px;
+}
+button{
+margin:15px;
+border-radius:16px;
+padding: 10px 20px;
+background-color:#fc6d14;
+font-size:15px;
+color:#fff;
+border: 3px solid #fc6d14;
+cursor:pointer;
+font-family:'Nunito', sans-serif;
+font-weight:bold;
+}
+input{
+margin:5px;
+font-size:15px;
+padding:15px;
+text-align:center;
+boxing-size:border-box;
+border-radius:25px;
+font-family:'Nunito', sans-serif;
+width:250px;
+border:3px solid #fc6d14;
+}
+a{
+text-decoration:none;
+}
+header{
+display:-webkit-flex;
+display:-moz-flex;
+display:-ms-flex;
+display:-o-flex;
+display:flex;
+justify-content:space-between;
+align-items:center;
+paddding:30px 70 px;
+}
+.nav-area{
+list-style:none;
+}
+.nav-area li{
+display:inline-block;
+padding:0 15px;
+text-transform:uppercase;
+}
+.btn-area{
+color:white;
+cursor:pointer;
+font-size:16px;
+text-transform:uppercase;
+padding:10px 30px;
+border-radius:5px;
+background:#fc6d14;
+font-weight:bold;
+font-family:'Nunito',sans-serif;
+margin:0;
+}
+.logo{
+cursor:pointer;
+height:50;
+width:60;
+}
+.login a{
+color:white;
+}
+.login a:hover{
+color:#fc6d14;
+}
+</style>
+</head>
+<body>
+<header>
+<img src="https://lh3.googleusercontent.com/COfbukN9lscu3FgGUyiVlmokFcgTmbzKAPwOZrvQdZXUXzyw5mt6n9r_CFiouORAPg" class="logo">
+<nav class="nav-area">
+<ul>
+<li></li>
+</ul>
+</nav>
+<a class="btn-area" href="/home">Home</a>
+</header>
+<div class="login">
+<h2 id="heading"><b>Login</b></h2>
+{{msg}}
+<form action="/login" method="post">
+<p>User Name</p>
+<input type="text" name="name" placeholder="Enter the User Name" required/>
+<p>Password</p>
+<input type="password" name="password" placeholder="Password" required/><br>
+<button type="submit">Login</button>
+</form>
+<p>Don't have an account? <a href="/home">Sign In</a></p>
+</div>
+</body>
+</html>
